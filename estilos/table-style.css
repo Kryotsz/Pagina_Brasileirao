@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.container-principal {
+    width: 100vw;
+    height: 100%;
+    margin-top: 41px;
+}
+
+.conteudo-superior {
+    display: flex;
+}
+
+.container-principal--tabela {
+    height: 100%;
+    width: 50%;
+    margin-left: 170px;
+    overflow-x: overlay;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+thead {
+    color: rgba(128, 128, 128, 0.745);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+}
+
+tbody {
+    font-family: 'Open Sans', sans-serif;
+}
+
+tr {
+    text-align: center;
+    border-right: 0px solid #999;
+    border-bottom: solid 1px #ddd;
+    height: 55px;
+}
+
+th, td {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+th {
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+td {
+    font-size: 14px;
+}
+
+td:nth-child(2n+4) {
+    background-color: #F5F5F5;
+}
+
+td:nth-child(-n+2) {
+    font-size: 17px;
+}
+
+td:nth-child(3) {
+    font-size: 11px;
+}
+
+td:nth-child(4) {
+    font-weight: bold;
+}
+
+tr:nth-child(-n+4) td:first-child {
+    color:blue;
+}
+
+tr:nth-child(n+5) td:first-child {
+    color:#8AFEFF;
+}
+
+tr:nth-child(n+7) td:first-child {
+    color:green;
+}
+
+tr:nth-child(n+13) td:first-child {
+    color:gray;
+}
+
+tr:nth-child(n+17) td:first-child {
+    color:red;
+}
+
+table span {
+    color: #bebebe;
+}
+
+/* .tabela {
+    height: 100%;
+    width: 90%;
+    margin-left: 150px;
+    overflow-x: auto;
+    overflow-x: overlay;
+} */
+
+.tabela-head {
+    height: 40px;
+}
+
+.titulo-tabela {
+    margin-bottom: 10px;
+}
+
+.classificacao {
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 3px;
+}
+
+.classificacao-icone {
+    background-size: 17px 50px;
+    background: url(https://s.glbimg.com/es/ge/static/live/widget_classificacao_responsivo/img/sprite-tabela-icones.svg?5dfb76dc3509) no-repeat left 1px;
+    display: inline-block;
+    height: 10px;
+    background-position-y: 2px;
+    overflow: hidden;
+    width: 8px;
+}
+
+.classificacao-icone--negativa {
+    background-position: right 2px;
+}
+
+.classificacao-icone--neutra {
+    background-image: none;
+    background-color: #ccc;
+    height: 7px;
+    width: 7px;
+}
+
+.ultimos-jogos {
+    border-radius: 50%;
+    display: inline-block;
+    height: 7px;
+    margin-left: 0;
+    overflow: hidden;
+    width: 7px;
+}
+
+.ultimos-jogos--vitoria {
+    background-color: #51a81e;
+}
+
+.ultimos-jogos--derrota {
+    background-color: #f00;
+}
+
+.ultimos-jogos--empate {
+    background-color: #ccc;
+}
+
+.faixa-classificacao {
+    margin: 8px 0 36px;
+    color: #999;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.faixa-classificacao--agrupador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.faixa-classificacao--grupo {
+    white-space: nowrap;
+}
+
+.faixa-classificacao--label {
+    line-height: 18px;
+    margin-right: 20px;
+    text-transform: lowercase;
+}
+
+.faixa-classificacao--icone {
+    height: 9px;
+    margin-left: 0;
+    margin-right: 1px;
+    width: 9px;
+}
+
+.regulamento {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.regulamento--ver-regulamento {
+    cursor: pointer;
+    transition: color .35s;
+    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+}
+
+@media only screen and (max-width: 960px) {
+    .conteudo-superior {
+        display: block;
+        margin: 0 70px;
+    }
+
+    .container-principal--tabela {
+        width: 100%;
+        margin: 0;
+    }
+
+    .faixa-classificacao {
+        font-size: 10px;
+    }
+
+    .faixa-classificacao--label {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
