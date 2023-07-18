@@ -1,4 +1,4 @@
-# Pagina_Brasileirao
+# Projeto Página do Brasileirão
  
 Projeto que visa recriar a página do Brasileirão do site do GE, esse projeto utiliza HTML, CSS e JavaScript, além de um pouquinho de JQuery. 
 
