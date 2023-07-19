@@ -1,11 +1,8 @@
-// token teste = test_0d2f2199b6c253642030c86933a8bc
-// token live = live_1cc0e2f51c12249ce776fca9765ba6
-
 function ajaxTabela() {
     $.ajax({
     type: "GET",
     url: "https://api.api-futebol.com.br/v1/campeonatos/10/tabela",
-    headers: {'Authorization': 'Bearer live_1cc0e2f51c12249ce776fca9765ba6'},
+    headers: {'Authorization': `Bearer ${token}`},
     contentType: 'json',
     dataType: 'json',
     success: function(response){
@@ -21,7 +18,7 @@ function ajaxRodadas() {
     $.ajax({
     type: "GET",
     url: "https://api.api-futebol.com.br/v1/campeonatos/10/rodadas",
-    headers: {'Authorization': 'Bearer live_1cc0e2f51c12249ce776fca9765ba6'},
+    headers: {'Authorization': `Bearer ${token}`},
     contentType: 'json',
     dataType: 'json',
     success: function(response){
@@ -36,7 +33,7 @@ function ajaxJogos(rodadaId) {
     $.ajax({
     type: "GET",
     url: `https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/${rodadaId}`,
-    headers: {'Authorization': 'Bearer live_1cc0e2f51c12249ce776fca9765ba6'},
+    headers: {'Authorization': `Bearer ${token}`},
     contentType: 'json',
     dataType: 'json',
     success: function(response){
@@ -51,7 +48,7 @@ function ajaxArtilharia() {
     $.ajax({
     type: "GET",
     url: `https://api.api-futebol.com.br/v1/campeonatos/10/artilharia`,
-    headers: {'Authorization': 'Bearer test_0d2f2199b6c253642030c86933a8bc'},
+    headers: {'Authorization': `Bearer ${token}`},
     contentType: 'json',
     dataType: 'json',
     success: function(response){
