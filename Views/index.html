@@ -68,7 +68,7 @@
       </ul>
   </nav>
   </header>
-  <main id="containerPrincipal">
+  <main id="containerPrincipal"> <!-- container que abrigará todo o conteúdo da página gerado pelo JavaScript -->
     <div id="containerSuperior"></div>
   </main>
   <div class="feed"> <!-- feed de notícias do site (ainda não implementado) -->
@@ -127,16 +127,21 @@
   <script src="../Scripts/artilharia.js"></script>
   <script>
     window.onload = function(){
-      existeTabela = false;
-      existeArtilharia = false;
-      loaderTabela();
-      ajaxTabela();
+        // variáveis de controle
+        existeTabela = false;
+        existeArtilharia = false;
+        // chama função para aparecer o loader na tela enquanto a tabela não carrega
+        loaderTabela();
+        // chama a função que faz a requisição para construir a tabela com base nos dados da API
+        ajaxTabela();
     } 
 
     function loaderTabela() {
+        // se a tabela não foi gerada, o loader aparece na tela
       if (existeTabela == false) {
         $("#containerPrincipal").html('<div class="containerLoader"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>');
       }else {
+        // se a tabela vai ser gerada, tira o loader da tela e prepara as divs para receber a tabela
         $("#containerPrincipal").html('<div id="containerSuperior"></div><div id="containerInferior"></div>');
       }
     } 
